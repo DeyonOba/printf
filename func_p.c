@@ -99,4 +99,6 @@ int print_binary(va_list ap)
 	count = 0;
 	n= va_arg(ap, unsigned int);
 
-	count += 
+	count += printNumber(n);
+	
+	return (count);	

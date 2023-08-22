@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 		{'u', print_unsigned},
 		{'x', print_hex},
 		{'X', print_HEX},
+		{'o', print_unsigned_octal},
 	};
 	int i, size, count = 0;
 	va_list ap;

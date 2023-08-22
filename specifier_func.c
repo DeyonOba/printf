@@ -71,3 +71,10 @@ void print_percent(va_list ap, int *count)
 	(void) ap;
 	*count += _putchar('%');
 }
+
+void print_binary(va_list ap, int *count)
+{
+	int num  = va_arg(ap, int);
+
+	decimal_to_binary(num, count);
+}

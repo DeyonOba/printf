@@ -47,3 +47,27 @@ int int_to_string(int num, char *buffer, int bufferSize)
 	}
 	return (length);
 }
+/**
+ *
+ */
+void decimal_to_binary(int num, int *count)
+{
+    if (num > 1)
+    {
+        if (num % 2 == 0)
+        {
+            decimal_to_binary(num / 2);
+            putchar('0');
+            *count += 1;
+        }
+        else
+        {
+            decimal_to_binary(num / 2);
+            putchar('1');
+            *count += 1;
+        }
+    }
+    else
+        putchar('1');
+        count += 1;
+}

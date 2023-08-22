@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		format++;
 
 		for (i = 0; i < size; i++)
-		{	
+		{
 			if (*format == specs[i].specifier)
 			{
 				specs[i].func(ap, &count);

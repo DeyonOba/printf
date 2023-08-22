@@ -8,6 +8,8 @@
  */
 int _printf(const char *format, ...)
 {
+	if (*format == NULL)
+		return (-1);
 	spec specs[] = {
 		{'c', print_char},
 		{'s', print_string},

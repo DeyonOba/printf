@@ -31,5 +31,6 @@ void print_integer(va_list ap, int *count);
 void print_space(va_list ap, int *count);
 void print_unsigned(va_list ap, int *count);
 void print_hex(va_list ap, int *count);
+void print_HEX(va_list ap, int *count);
 
 #endif

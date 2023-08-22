@@ -88,3 +88,30 @@ void print_hex(va_list ap, int *count)
 		*count += _putchar(hex[i]);
 }
 
+/**
+ * print_HEX - Prints an integer in hexadecimal format
+ *
+ * @ap: A va_list containing the integer to print
+ * @count: A pointer to a counter of printed characters
+ */
+void print_HEX(va_list ap, int *count)
+{
+	unsigned int num;
+	char hex[100];
+	int i, length;
+
+	num = va_arg(ap, unsigned int);
+	if (num == 0)
+	{
+		*count += _putchar('0');
+		return;
+	}
+	for (i = 0; num != 0; i++)
+	{
+		hex[i] = "0123456789ABCDEF"[num % 16];
+		num /= 16;
+	}
+	length = i;
+	for (i = length - 1; i >= 0; i--)
+		*count += _putchar(hex[i]);
+}

@@ -6,9 +6,9 @@
 #ifndef _MAIN
 #define _MAIN
 
-int _putchar(char c);
+int _putchar(char c, int *count);
 int _printf(const char *format, ...);
 void printNumber(int num);
-
-
+int _puts (const char *s, int *count);
+int _strlen(const char *format);
 #endif

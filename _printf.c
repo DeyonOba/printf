@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 
 	va_start(ap, format);
 	size = sizeof(specs) / sizeof(specs[0]);
+
+
 	while (*format)
 	{
 		if (*format != '%')
@@ -31,7 +33,7 @@ int _printf(const char *format, ...)
 		format++;
 
 		for (i = 0; i < size; i++)
-		{
+		{	
 			if (*format == specs[i].specifier)
 			{
 				specs[i].func(ap, &count);

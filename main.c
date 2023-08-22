@@ -14,7 +14,8 @@ int main(void)
 	_printf("Length:[%d, %i]\n", len, len);
 	_printf("Character:[%c]\n", 'H');
 	_printf("String:[%s]\n", "I am a string !");
-	len = _printf("Percent:[%%]\n");return (0);
+	len = _printf("Percent:[%%]\n");
+	
 
 	return (0);
 }

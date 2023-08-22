@@ -8,98 +8,45 @@
  * Return: length of string
  **/
 
-int int_to_string(int num, char *buffer, int bufferSize)
-{
-	int i, j, len, isNeg;
+int int_to_string(int num, char *buffer, int bufferSize) {
 
-	if (num == 0)
-	{
-		buffer[0] = '0';
-		buffer[1] = '\0';
-		return (1);
-	}
+    int i, j, length, isNegative;
 
-	isNeg = 0;
-	if (num < 0)
-	{
-		isNeg = 1;
-		num = -num;
-	}
+    if (num == 0) {
+        buffer[0] = '0';
+        buffer[1] = '\0';
+        return 1;
+    }
 
-	len = 0;
-	while (num > 0)
-	{
-		buffer[len++] = (num % 10) + '0';
-		num /= 10;
-	}
-	if (isNeg)
-		buffer[len++] = '-';
-	if (len >= bufferSize)
-		return (-1);
-	buffer[len] = '\0';
+    isNegative = 0;
+    if (num < 0) {
+        isNegative = 1;
+        num = -num;
+    }
 
-	for (i = 0; j = (len - 1); i < j; i++, j--)
-	{
-		char temp;
+    length = 0;
+    while (num > 0) {
+        buffer[length++] = (num % 10) + '0';
+        num /= 10;
+    }
 
-		temp = buffer[i];
-		buffer[i] = buffer[j];
-		buffer[j] = temp;
-	}
-	return (len);
-}
+    if (isNegative) {
+        buffer[length++] = '-';
+    }
 
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+    if (length >= bufferSize) {
+        return -1;
+    }
 
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+    buffer[length] = '\0';
 
-/**
- * printNumber - a function to print out numbers
- * @num : number to be printed
- *
- * Return: Nothing
- **/
+       buffer[length] = '\0';
 
-void printNumber(int num)
-{
-	char *digits
-	int i;
-
-	if (num < 0)
-	{
-		_putchar('-');
-		num = -num;
-	}
-
-	if (num == 0)
-	{
-		_putchar('0');
-		return;
-	}
-
-	digits = malloc(sizeof(digits));
-
-	if (digits == NULL)
-		return;
-
-	while (num > 0)
-	{
-		digits[count++] = (num % 10) + '0';
-		num /= 10;
-	}
-
-	for (i = count - 1; i >= 0; i--)
-		_putchar(digits[i]);
-
-	free(digits);
+    for (i = 0, j = length - 1; i < j; i++, j--) {
+        char temp = buffer[i];
+        buffer[i] = buffer[j];
+        buffer[j] = temp;
+    }
+    return length;
 }
 

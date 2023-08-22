@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 		{'%', print_percent},
 		{'d', print_integer},
 		{'i', print_integer},
-		{' ', print_empty},
 	};
 	int i, size, count = 0;
 	va_list ap;

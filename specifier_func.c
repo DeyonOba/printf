@@ -37,7 +37,9 @@ void print_integer(va_list ap, int *count)
  */
 void print_char(va_list ap, int *count)
 {
-	int c = va_arg(ap, int);
+	int c;
+
+	c = va_arg(ap, int);
 	*count += _putchar(c);
 }
 
@@ -58,6 +60,21 @@ void print_string(va_list ap, int *count)
 		str++;
 	}
 }
+
+/**
+ * print_space - Prints empty
+ * @ap: A variable argument list containing a string to be printed
+ * @count: count number of characters
+ *
+ * * Return: Nothing
+ */
+
+void print_space(va_list ap, int *count)
+{
+	(void) ap;
+	*count += -1;
+}	
+
 
 /**
  * print_percent - Prints a percent sign

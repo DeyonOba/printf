@@ -28,5 +28,7 @@ void print_char(va_list ap, int *count);
 void print_string(va_list ap, int *count);
 void print_percent(va_list ap, int *count);
 void print_integer(va_list ap, int *count);
+void print_space(va_list ap, int *count);
+
 
 #endif

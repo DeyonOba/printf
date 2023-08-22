@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		{' ', print_space},
 		{'\0', print_space},
 		{'u', print_unsigned},
+		{'x', print_hex},
 	};
 	int i, size, count = 0;
 	va_list ap;

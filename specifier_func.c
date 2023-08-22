@@ -52,8 +52,6 @@ void print_string(va_list ap, int *count)
 {
 	char *str = va_arg(ap, char *);
 
-	if (str == NULL)
-		return;
 	while (*str)
 	{
 		*count += _putchar(*str);

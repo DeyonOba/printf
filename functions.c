@@ -60,21 +60,21 @@ int decimal_to_binary(unsigned int num, int *count)
 	{
 		if (num % 2 == 0)
 		{
+			*count += 1;
 			decimal_to_binary(num / 2, count);
 			putchar('0');
-			*count += 1;
 		}
 		else
 		{
+			*count += 1;
 			decimal_to_binary(num / 2, count);
 			putchar('1');
-			*count += 1;
 		}
 	}
 	else
 	{
 		putchar('1');
-		count += 1;
+		*count += 1;
 	}
 	return (0);
 }

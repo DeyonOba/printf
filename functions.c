@@ -78,3 +78,31 @@ int decimal_to_binary(unsigned int num, int *count)
 	}
 	return (0);
 }
+
+/**
+ * decimal_to_HEX - convert unsigned integer to hexadecimal
+ *
+ * @num: Unsigned integer
+ * @count: Integer pointer that increments when print is successful
+ * Return: 0 (Success), -1 (Error)
+ */
+int decimal_to_HEX(unsigned int num, int *count)
+{
+	char hex[100];
+	int i, length;
+
+	if (num == 0)
+	{
+		*count += _putchar('0');
+		return (0);
+	}
+	for (i = 0; num != 0; i++)
+	{
+		hex[i] = "0123456789ABCDEF"[num % 16];
+		num /= 16;
+	}
+	length = i;
+	for (i = length - 1; i >= 0; i--)
+		*count += _putchar(hex[i]);
+	return (0);
+}

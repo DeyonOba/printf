@@ -56,13 +56,13 @@ void decimal_to_binary(int num, int *count)
     {
         if (num % 2 == 0)
         {
-            decimal_to_binary(num / 2);
+            decimal_to_binary(num / 2, count);
             putchar('0');
             *count += 1;
         }
         else
         {
-            decimal_to_binary(num / 2);
+            decimal_to_binary(num / 2, count);
             putchar('1');
             *count += 1;
         }

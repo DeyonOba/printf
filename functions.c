@@ -50,7 +50,7 @@ int int_to_string(int num, char *buffer, int bufferSize)
 /**
  *
  */
-void decimal_to_binary(int num, int *count)
+int decimal_to_binary(int num, int *count)
 {
     if (num > 1)
     {
@@ -68,6 +68,9 @@ void decimal_to_binary(int num, int *count)
         }
     }
     else
+    {
         putchar('1');
         count += 1;
+    }
+     return (0);
 }

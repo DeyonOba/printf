@@ -10,6 +10,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int int_to_string(int num, char *buffer, int bufferSize);
+int decimal_to_binary(int num, int *count);
 
 /**
  * struct spec - Struct for format specifiers and their respective functions
@@ -33,6 +34,7 @@ void print_unsigned(va_list ap, int *count);
 void print_hex(va_list ap, int *count);
 void print_HEX(va_list ap, int *count);
 void print_unsigned_octal(va_list ap, int *count);
+void print_binary(va_list ap, int *count);
 
 
 #endif

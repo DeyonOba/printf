@@ -42,3 +42,23 @@ void print_binary(va_list ap, int *count)
 
 	decimal_to_binary(num, count);
 }
+
+/**
+ * print_nonprintable - print hexadecimal characters of non printable values
+ *
+ * @ap: variable name of va list
+ * @count: Pointer to a counter of printed characters
+ */
+void print_nonprintable(va_list ap, int *count)
+{
+	unsigned int c = va_arg(ap, int);
+
+	if (c < 32 || c > 127)
+	{
+		*count += _putchar('\\');
+		*count += _putchar('x');
+		if (c < 16)
+			*count += _putchar('0');
+		decimal_to_HEX(c, count);
+	}
+}

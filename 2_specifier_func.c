@@ -29,3 +29,16 @@ void print_unsigned_octal(va_list ap, int *count)
 	for (i = length - 1; i >= 0; i--)
 		*count += _putchar(octal[i]);
 }
+
+/**
+ * print_binary - Display binary number to stdout
+ *
+ * @ap: A va_list containing the unsigned integer value
+ * @count: Pointer to a counter of printed characters
+ */
+void print_binary(va_list ap, int *count)
+{
+	unsigned int num  = va_arg(ap, unsigned int);
+
+	decimal_to_binary(num, count);
+}

@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{'x', print_hex},
 		{'X', print_HEX},
 		{'o', print_unsigned_octal},
+		{'b', print_binary},
 	};
 	int i, size, count = 0;
 	va_list ap;

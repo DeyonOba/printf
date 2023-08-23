@@ -10,7 +10,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int int_to_string(int num, char *buffer, int bufferSize);
-int decimal_to_binary(int num, int *count);
+int decimal_to_binary(unsigned int num, int *count);
 
 /**
  * struct spec - Struct for format specifiers and their respective functions

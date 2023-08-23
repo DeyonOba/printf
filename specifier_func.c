@@ -115,10 +115,3 @@ void print_HEX(va_list ap, int *count)
 	for (i = length - 1; i >= 0; i--)
 		*count += _putchar(hex[i]);
 }
-
-void print_binary(va_list ap, int *count)
-{
-	int num  = va_arg(ap, int);
-
-	decimal_to_binary(num, count);
-}
